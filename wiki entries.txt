@@ -1,0 +1,24 @@
+Effect
+	RLSocketed:
+	- Dodge Force
+		- Force Multiplier, any double
+		- Requires DodgeActivator
+	DistinctSocketedDescriptions:
+	- DDD Damage
+		- Damage Type, required, ddd_fire
+		- Amount, RandomValueRange
+		- Requires DDDAttackedActivator or DDDAttackingActivator
+	- DDD Resistance
+		- Damage Type, required, ddd_fire
+		- Amount, RandomValueRange
+		- Requires DDDAttackedActivator or DDDAttackingActivator
+	- DDD Remove Immunity
+		- Damage Type, ddd_fire
+		- Requires DDDAttackedActivator or DDDAttackingActivator
+	- DDD Apply Immunity
+		- Damage Type, ddd_fire
+		- Requires DDDAttackedActivator or DDDAttackingActivator
+
+Activator
+RLSocketed:
+- Dodge

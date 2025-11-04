@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "socketed.mixin.vanilla",
+  "refmap": "mixins.socketed.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "mixins": [
+    "EnchantmentHelperMixin",
+    "EntityLivingBaseMixin",
+    "EntityLivingMixin",
+    "EntityVillagerListEnchantedItemMixin",
+    "EntityVillagerListItemMixin",
+    "ItemMixin",
+    "ItemStackMixin",
+    "LootEntryItemMixin"
+  ],
+  "injectors": {
+    "maxShiftBy": 10
+  },
+  "client": [
+    "IGuiContainerMixin"
+  ]
+}

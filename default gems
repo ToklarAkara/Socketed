@@ -1,0 +1,117 @@
+new shit
+
+effects
+    dmg change (livinghurt)
+activators
+    hurt activator
+
+done
+
+tier 0
+    poison potato
+        poison on yourself and mobs around you (helmet)
+    spider eye
+        weakness on yourself and mobs around you (chest)
+    slimeball
+        slowness on yourself + mobs around you (legs)
+    sugar
+        speed on yourself and mobs around you (boots)
+    dead bush
+        + 0.5 atk dmg
+    iron block
+        +1 atk dmg (weapon)
+        +1 armor (armor)
+    coal block
+        ignite for 2 sec
+    gunpowder
+        small explosion on hit
+tier 1
+    blaze rod
+        ignite + attacking
+    cobweb
+        slowness for mobs around you in 6 blocks around you (legs)
+    glowstone dust
+        glowing AOE 4 blocks (head
+    glowstone block
+        glowing AOE 12 blocks (head)
+    gold carrot
+        night vision (y<=60 + dark, head)
+    piston
+        knockback
+    sticky piston
+        anti knockback
+    redstone block
+        haste (chest)
+    emerald
+        luck effect (body)
+    diamond
+        +2 atk dmg (weapon)
+        +1 armor, +1 toughness (armor)
+    flint
+        + power enchant (would need custom code)
+    rabbits foot (feet)
+        + 1 luck
+        + jump boost
+tier 2
+    gapple
+        absorption 1 (hand)
+    sponge
+        water breathing
+    anvil
+        stronger knockback on attacked
+    witherskull
+        wither on AOE
+    pufferfish
+        poison on AOE
+    sea lantern
+        + blindness on mobs when hit
+    clownfish
+        swim speed
+    obsidian
+        + dura on armor
+        + strength on weapon, on attacking with chance
+    tnt
+        bigger explosion
+    quartz
+        +xp earned (would need a new attribute/effect)
+    emerald block
+        reduce trading cost (needs new effect)
+tier3
+    ghast tear (only chestplate)
+        regeneration 1
+        health boost 1
+    totem
+        deathtotem check activator + undying totem effect + cancel event effect
+    end crystal
+        attacking activator + chance condition, undying totem effect, condition non boss, chance
+    beacon
+        glowing+invis on mobs in 32 blocks radius passive, only works on surface (light level 15)
+        chance for invis passive in darkness
+    god apple
+        absorption 2, fire res (if health <25%), not whole time
+    nether star
+        wither aoe on hit (armor)
+        + 5 atk dmg (weapon)
+    zombie head
+        cant get aggrod by zombies
+    skelly head
+        cant get aggrod by skellies
+    creeper head
+        cant get aggrod by creepers
+    ender eye
+        cant get aggrod by endermen (needs an effect)
+
+
+todo:
+
+tier 2
+    dragon breath
+        + iframes after hit (does that even work with attacked activator? --> nope)
+tier 3
+    dragon egg
+        resistance 1
+
+
+gem combinations
+    all the aoe+self tier 0s in one without the self
+    golden carrot + spider eye -> invis + night vision (lose weakness effect of spider eye)
