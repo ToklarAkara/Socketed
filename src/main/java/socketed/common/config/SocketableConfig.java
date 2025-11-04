@@ -119,18 +119,10 @@ public class SocketableConfig {
 		}
 		
 		public SocketableType(String regex) {
-<<<<<<< HEAD
 		    this.canSocket = item -> {
 		        ResourceLocation location = item.getRegistryName();
-		        if (location == null) return false;
-		        return location.toString().matches(regex);
+		        return location != null && location.toString().matches(regex);
 		    };
-=======
-			this.canSocket = item -> {
-				ResourceLocation location = item.getRegistryName();
-				return location != null && location.toString().matches(regex);
-			};
->>>>>>> d3160c9aff0111ea69f0800f39db478bd401cd68
 		}
 
 		public boolean canSocket(Item item) {
