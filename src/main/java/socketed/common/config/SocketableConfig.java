@@ -18,26 +18,18 @@ public class SocketableConfig {
 	public static final Map<String, SocketableType> forcedItemTypes = new HashMap<>();
 	
 	static {
-	    defaultItemTypes.put("HELMET", new SocketableType(v -> {
-	        return v instanceof ItemArmor && EntityEquipmentSlot.HEAD.equals(((ItemArmor)v).getEquipmentSlot());
-	    }));
-	    defaultItemTypes.put("CHESTPLATE", new SocketableType(v -> {
-	        return v instanceof ItemArmor && EntityEquipmentSlot.CHEST.equals(((ItemArmor)v).getEquipmentSlot());
-	    }));
-	    defaultItemTypes.put("LEGGINGS", new SocketableType(v -> {
-	        return v instanceof ItemArmor && EntityEquipmentSlot.LEGS.equals(((ItemArmor)v).getEquipmentSlot());
-	    }));
-	    defaultItemTypes.put("BOOTS", new SocketableType(v -> {
-	        return v instanceof ItemArmor && EntityEquipmentSlot.FEET.equals(((ItemArmor)v).getEquipmentSlot());
-	    }));
-	    defaultItemTypes.put("SWORD", new SocketableType(v -> v instanceof ItemSword));
-	    defaultItemTypes.put("FISHING_ROD", new SocketableType(v -> v instanceof ItemFishingRod));
-	    defaultItemTypes.put("BOW", new SocketableType(v -> v instanceof ItemBow));
-	    defaultItemTypes.put("AXE", new SocketableType(v -> v instanceof ItemAxe));
-	    defaultItemTypes.put("PICKAXE", new SocketableType(v -> v instanceof ItemPickaxe));
-	    defaultItemTypes.put("HOE", new SocketableType(v -> v instanceof ItemHoe));
-	    defaultItemTypes.put("SHOVEL", new SocketableType(v -> v instanceof ItemSpade));
-	    defaultItemTypes.put("SHIELD", new SocketableType(v -> v instanceof ItemShield));
+	    SocketableConfig.defaultItemTypes.put("HELMET", new SocketableType(v -> v instanceof ItemArmor && ((ItemArmor)v).getEquipmentSlot().equals(EntityEquipmentSlot.HEAD)));
+	    SocketableConfig.defaultItemTypes.put("CHESTPLATE", new SocketableType(v -> v instanceof ItemArmor && ((ItemArmor)v).getEquipmentSlot().equals(EntityEquipmentSlot.CHEST)));
+	    SocketableConfig.defaultItemTypes.put("LEGGINGS", new SocketableType(v -> v instanceof ItemArmor && ((ItemArmor)v).getEquipmentSlot().equals(EntityEquipmentSlot.LEGS)));
+	    SocketableConfig.defaultItemTypes.put("BOOTS", new SocketableType(v -> v instanceof ItemArmor && ((ItemArmor)v).getEquipmentSlot().equals(EntityEquipmentSlot.FEET)));
+	    SocketableConfig.defaultItemTypes.put("SWORD", new SocketableType(v -> v instanceof ItemSword));
+	    SocketableConfig.defaultItemTypes.put("FISHING_ROD", new SocketableType(v -> v instanceof ItemFishingRod));
+	    SocketableConfig.defaultItemTypes.put("BOW", new SocketableType(v -> v instanceof ItemBow));
+	    SocketableConfig.defaultItemTypes.put("AXE", new SocketableType(v -> v instanceof ItemAxe));
+	    SocketableConfig.defaultItemTypes.put("PICKAXE", new SocketableType(v -> v instanceof ItemPickaxe));
+	    SocketableConfig.defaultItemTypes.put("HOE", new SocketableType(v -> v instanceof ItemHoe));
+	    SocketableConfig.defaultItemTypes.put("SHOVEL", new SocketableType(v -> v instanceof ItemSpade));
+	    SocketableConfig.defaultItemTypes.put("SHIELD", new SocketableType(v -> v instanceof ItemShield));
 	}
 	
 	@Config.Comment(
@@ -127,11 +119,18 @@ public class SocketableConfig {
 		}
 		
 		public SocketableType(String regex) {
+<<<<<<< HEAD
 		    this.canSocket = item -> {
 		        ResourceLocation location = item.getRegistryName();
 		        if (location == null) return false;
 		        return location.toString().matches(regex);
 		    };
+=======
+			this.canSocket = item -> {
+				ResourceLocation location = item.getRegistryName();
+				return location != null && location.toString().matches(regex);
+			};
+>>>>>>> d3160c9aff0111ea69f0800f39db478bd401cd68
 		}
 
 		public boolean canSocket(Item item) {
